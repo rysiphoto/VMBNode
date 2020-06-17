@@ -1,10 +1,8 @@
 // Requiring necessary npm packages
-var express = require('express');
-var session = require('express-session');
-// Requiring passport as we've configured it
-var passport = require('./config/passport');
-// var pug = require('pug');
-var path = require('path');
+const express = require('express');
+const session = require('express-session');
+const passport = require('./config/passport');
+const path = require('path');
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
