@@ -20,7 +20,7 @@ module.exports = function (app) {
     if (req.user) {
       return res.redirect('/brewery');
     }
-    res.render('login.pug', {
+    res.render('login.js', {
       className: 'login'
     });
   });
@@ -40,7 +40,7 @@ module.exports = function (app) {
 
   app.get('/vehicles', function (req, res) {
     db.Vehicle.findAll({ raw: true }).then(function (vehicle) {
-      res.render('vehicle.pug', { vehicles: vehicle, className: 'login' });
+      res.render('vehicle.js', { vehicles: vehicle, className: 'login' });
     });
   });
   app.get('/garage/add', isAuthenticated, function (req, res) {
